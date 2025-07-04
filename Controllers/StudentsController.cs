@@ -4,7 +4,8 @@ namespace student_portal.Controllers
 {
     public class StudentsController : Controller
     {
-        public IActionResult Index()
+        [HttpGet]
+        public IActionResult Add()
         {
             return View();
         }

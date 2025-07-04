@@ -8,7 +8,8 @@ builder.Services.AddControllersWithViews();
 
 // Injecting DBContext->Db to coonect and SQL server to use.
 
-builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer())
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+options.UseSqlServer(builder.Configuration.GetConnectionString("student_portal")));
 
 var app = builder.Build();
 

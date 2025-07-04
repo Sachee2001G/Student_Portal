@@ -1,4 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using student_portal.Models.Entities;
+
 
 
 namespace student_portal.Data
@@ -11,6 +13,12 @@ namespace student_portal.Data
         {
 
         }
+
+        // Creating a property as a DB_set
+
+        //public collection_type<_type_> Table_name { get; set; }
+
+        public DbSet<Student>Students { get; set; }
 
     }
 

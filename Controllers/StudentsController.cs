@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using student_portal.Models;
 
 namespace student_portal.Controllers
 {
@@ -7,6 +8,12 @@ namespace student_portal.Controllers
         [HttpGet]
         public IActionResult Add()
         {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Add(AddStudentViewModel viewModel)
+        {
+
             return View();
         }
     }
